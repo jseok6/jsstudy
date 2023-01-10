@@ -1,0 +1,74 @@
+<script>
+    //number
+    const num=1.253213;
+    console.log(num.toFixed(1));//소수점 가로숫자자리 에서 반올림
+    console.log(`${num} toFixed: ${num.toFixed()}`);
+    console.log(`${num} toString: ${num.toString()}`);
+    console.log(typeof num);
+    console.log(typeof num.toString());
+
+
+    //string
+    const str1=new String("ABcd");
+    const str="ABcd";
+    str.charAt("");
+    console.log(`${str} charAt("A"): ${str.charAt(0)}`);//0번 인덱스의 문자:charAt(0)
+    console.log(`${str} concat("e"): ${str.concat("e")}`);//문자열 더하기
+    console.log(`${str} endsWith("d"): ${str.endsWith("d")}`);//d로 끝나는지 아닌지 확인
+    console.log(`${str} startsWith("A"): ${str.startsWith("A")}`);//A로 시작하는지 아닌지 확인
+    console.log(`${str} includes("cd"): ${str.includes("cd")}`);//cd를 포함하는지 아닌지 확인
+    console.log(`${str} indexOf("d"): ${str.indexOf("d")}`);//d가 어느 index에 위치하는지 
+    console.log(`${str} length: ${str.length}`);//길이 파악 마우스 올려보면 property잇는데 property는 ()없이 사용가능
+    console.log(`${str} padStart(4): ${str.padStart(4)}`);//빈값을 채워넣기
+    console.log(`${str} padStart(8): ${str.padStart(8)}`);//빈값을 채워넣기
+    console.log(`${str} str.repeat(5): ${str.repeat(5)}`);//index숫자만큼 반복하기
+    console.log(`${str} str.replace("cd","ef"): ${str.replace("cd","ef")}`);//대체하기
+    console.log(`${str} str.slice(2,3): ${str.slice(2,3)}`);//index부터index까지 자르기
+    console.log(`${str} str.split("c"): ${str.split("c")}`);// c기준으로 나누기
+    console.log("나는 학교에 갑니다.".split(" "));
+    console.log(`${str} str.substring(1): ${str.substring(1)}`);//1번부터 출력
+    console.log(`${str} str.toLowerCase(): ${str.toLowerCase()}`);//소문자로변환
+    console.log(`${str} str.toUpperCase(): ${str.toUpperCase()}`);//대문자로변환
+    console.log(`${str} .trim(): ${"   abcd    ".trim()}`);//양쪽의 스페이스 없애기
+    
+    //array
+    const arr=["A","B","c","d"];
+    console.log(`${arr} .concat(e): ${arr.concat("e","f")}`);//e,f추가
+    console.log(`${arr} .concat(["g"]): ${arr.concat(["g"])}`);//g추가
+    // console.log(`${arr} .copyWithin(0,1,2): ${arr.copyWithin(0,1,2)}`);
+    // console.log(`${arr} .fill("a"): ${arr.fill("a")}`);//배열을 a로채우기
+    // console.log(`${arr} .pop(): ${arr.pop()}`);//맨마지막에 넣은 인덱스요소 가져오기
+    console.log(`${arr} .push(["g"]): ${arr.push("g")}`);//g추가
+    console.log(arr);
+    console.log(`${arr} .join([" ! "]): ${arr.join(" ! ")}`);//
+    console.log(`${arr} .reverse(): ${arr.reverse()}`);//반대로 출력하기
+    //forEach,filter,map,reduce,every,find,same
+    //forEach->반복작업
+    //filter->조건 필터링해서 배열반환
+    //map->배열의 요소를 변환
+    //reduce->요소합치기
+    //every->모든 요소가 조건에 부합하는지
+    //same->하나의 요소라도 조건에 부합하는지
+    //find->조건에 부합하는 요소 찾기
+    const callbackFn=(value, index, array)=>{
+        console.log(array);
+    };
+
+    arr.forEach(callbackFn);
+    arr.forEach((array)=>console.log(array));
+
+    //filter
+    const predicate1=(value)=>{
+        return value=="g";
+    };
+    console.log(arr.filter(predicate1));
+
+    console.log(arr.filter((value)=>value=="g"));
+
+    //map
+    console.log(arr.map((value)=>value));
+    
+
+
+    
+</script>
