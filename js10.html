@@ -1,0 +1,85 @@
+<script>
+    //break,continue 차이
+    //break,continue는 while,for문안에서 선언시 반복문이 종료된다
+    //array.some->예를들어 100개요소중 하나라도 조건에 맞으면 멈추는게 효율적이다
+    //만약에 2번째에서 조건이 맞으면 break
+    const breakFunc=()=>{
+        let count =0;
+        while(count<100) {
+            console.log(`${count} break테스트`);
+            if (count>10)
+            {
+                break;
+            }
+
+
+
+            count =count+1;
+        }
+        console.log(`break빠져나옴`);
+    };
+    breakFunc();
+
+
+    //return
+    //함수안에서 return 선언시 함수가 종료된다.
+    //계산이 완료되서 더 이상 함수 내의 코드가 실행 할 필요가 없을때
+    //매개변수가 빈 스트링이면 0을 리턴하고
+    //문자열이면 ex)"가나다" 면 ["가","나","다"]로 만들어주기
+    const strFunc=(str)=>{
+        if(str.length==0){
+            return 0;
+        }
+        return str.split("");
+
+    };
+    console.log(strFunc(""));
+    console.log(strFunc("가나다"));
+
+
+
+    const returnFunc=()=>{
+        let count =0;
+        while(count<100) {
+            console.log(`${count} return테스트`);
+            if (count>10)
+            {
+                return;
+            }
+
+
+
+            count =count+1;
+        }
+        console.log(`return빠져나옴`);
+    };
+    returnFunc();
+
+    //continue
+    //while, for문에서 continue선언시 다음반복으로 넘어간다
+    //array.filter->원래 잇던 배열에서 필터링할때
+    //[1,2,3]에서 빈배열로 push할때
+    //조건이 홀수 인 것만 필터링,
+    //짝수 일경우 컨티뉴 홀수일경우 푸쉬
+
+    const continueFunc=()=>{
+        let count =0;
+        while(count<100) {
+            
+            count =count+1;
+            if (count==98)
+            {
+                continue;
+            }
+            console.log(`${count}continue테스트`);
+
+
+
+            
+        }
+        console.log(`continue빠져나옴`);
+    };
+    continueFunc();
+
+
+</script>
