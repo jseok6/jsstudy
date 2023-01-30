@@ -1,0 +1,26 @@
+<script>
+    
+    const family ={
+        aunt:["c", "s"],
+    };
+    const test= {
+        "aunt":["c", "s"],
+    };
+    //json은 문자열이다.
+    //json은 자바스크립트의 객체다
+    //객체를 문자로 만드는것: JSON
+    //통신데이터는 모두 문자열이다.
+
+    //json의 필드가 될수 있는것
+    //1.문자
+    //2.숫자
+    //3.boolean
+    //4.객체? {} <ㅡ이모양
+    //5. 배열? [] <ㅡ이모양
+
+
+    const jsonFamily=JSON.stringify(family);
+    console.log(jsonFamily);
+    const family1=JSON.parse(jsonFamily);
+    console.log(family1);
+</script>
